@@ -1,0 +1,10 @@
+{"properties": [
+  {
+    "name": "endpoint-config.allowed-origins",
+    "description": "CORS allowed origins"
+  },
+  {
+    "name": "endpoint-config.allowed-methods",
+    "description": "CORS allowed methods"
+  }
+]}
