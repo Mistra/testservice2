@@ -23,9 +23,9 @@ public class EndpointController {
     public String operatorIsAllowed(RestTemplate restTemplate) {
         String str = null;
         try {
-            str = restTemplate.getForObject("http://service1:8762/backend", String.class);
+            str = restTemplate.getForObject("http://localhost:8762/backend", String.class);
         } catch (RestClientException e) {
-            str = "Cannot fetch service";
+            str = "Cannot fetch service (changed)";
         }
         str = str  + " - test!!!";
         return str;
