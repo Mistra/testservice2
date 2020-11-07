@@ -23,8 +23,9 @@ public class EndpointConfigurer implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        // registry.addMapping("/**")
-        //         .allowedOrigins(endpointConfiguration.getAllowedOrigins().stream().toArray(String[]::new))
-        //         .allowedMethods(endpointConfiguration.getAllowedMethods().stream().toArray(String[]::new));
+        registry.addMapping("/**")
+                // .allowedOrigins(endpointConfiguration.getAllowedOrigins().stream().toArray(String[]::new))
+                .allowedOrigins("*")
+                .allowedMethods(endpointConfiguration.getAllowedMethods().stream().toArray(String[]::new));
     }
 }
