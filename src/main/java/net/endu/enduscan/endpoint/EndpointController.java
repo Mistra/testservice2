@@ -25,7 +25,7 @@ public class EndpointController {
         try {
             str = restTemplate.getForObject("http://localhost:8762/backend", String.class);
         } catch (RestClientException e) {
-            str = "Cannot fetch service (changed)";
+            str = "Cannot fetch service (changed!)";
         }
         str = str  + " - test!!!";
         return str;
